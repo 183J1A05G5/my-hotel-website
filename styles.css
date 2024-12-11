@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/front3.jpg') no-repeat center center/cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3rem;
+    transition: transform 0.5s ease;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    transition: opacity 0.5s ease;
+}
+
+header:hover h1 {
+    transform: scale(1.1);
+}
+
+header:hover p {
+    opacity: 0.8;
+}
+
+nav {
+    background: #444;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    color: #ffcc00;
+}
+
+.container {
+    padding: 20px;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 40px;
+    border-radius: 10px; /* Optional: Adds rounded corners for a smooth look */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a light shadow for depth */
+}
+
+/* Section-specific background colors */
+#about {
+    background-color: #f1f1f1; /* Light grey */
+    color: #333;
+}
+
+#gallery {
+    background-color: #2c3e50; /* Dark blue */
+}
+
+#contact {
+    background-color: #16a085; /* Teal */
+}
+
+#services {
+    background-color: #2980b9; /* Blue */
+}
+
+#locate-us {
+    background-color: #34495e; /* Dark gray */
+}
+
+#services .services-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+#services .services-list {
+    display: flex;
+    animation: scrollServices 30s linear infinite;
+}
+
+#services .services-list li {
+    padding: 20px;
+    white-space: nowrap;
+    margin-right: 50px;
+}
+
+@keyframes scrollServices {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.section h2:hover {
+    color: #ff5733;
+}
+
+.section p {
+    text-align: justify;
+    transition: color 0.3s ease;
+}
+
+.section p:hover {
+    color: #666;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: calc(33.33% - 10px);
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+    background: #444;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.footer:hover {
+    background-color: #555;
+}
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.whatsapp-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+.call-us-fixed {
+    position: fixed;
+    bottom: 90px; /* Position above WhatsApp button */
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.call-us-fixed img {
+    width: 30px;
+    height: 30px;
+}
+
+.call-us-fixed:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.call-us-fixed:active {
+    transform: scale(0.95);
+}
+@media (max-width: 768px) {
+    .gallery img {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery img {
+        width: 100%;
+    }
+}
+
+/* New CSS for Locate Us Section */
+#locate-us {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #34495e; /* Dark gray */
+}
+
+#locate-us .map-container {
+    max-width: 100%;
+    margin: 20px auto;
+}
+
+#locate-us iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+}
+
+#tourist-attractions {
+    background-color: #f39c12; /* Golden color to highlight tourist attractions */
+    padding: 40px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+#tourist-attractions h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#tourist-attractions p {
+    font-size: 1.1rem;
+    color: #f1f1f1;
+    margin-bottom: 30px;
+}
+
+.attractions-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px;
+}
+
+.attraction {
+    background-size: cover; /* Ensures the background image covers the entire div */
+    background-position: center; /* Centers the image */
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    height: 250px; /* Sets a fixed height for each attraction card */
+    position: relative; /* Positions text properly over the background */
+}
+
+.attraction h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    position: absolute; /* Position the title over the image */
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a slight dark background for readability */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.attraction p {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    font-size: 1rem;
+    background-color: rgba(0, 0, 0, 0.4); /* Background for description */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.attraction:hover {
+    transform: translateY(-5px); /* Hover effect to lift the attraction card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    #tourist-attractions h2 {
+        font-size: 1.8rem;
+    }
+
+    .attractions-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .attraction h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #tourist-attractions h2 {
+        font-size: 1.6rem;
+    }
+
+    .attractions-list {
+        grid-template-columns: 1fr;
+    }
+
+    .attraction h3 {
+        font-size: 1rem;
+    }
+}
