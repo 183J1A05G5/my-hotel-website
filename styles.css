@@ -101,7 +101,7 @@ nav a:hover {
 
 #services .services-list {
     display: flex;
-    animation: scrollServices 30s linear infinite;
+    animation: scrollServices 50s linear infinite;
 }
 
 #services .services-list li {
